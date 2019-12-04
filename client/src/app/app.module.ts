@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AlertModule } from 'ngx-bootstrap';
 import { AppComponent } from './app.component';
 import { CarsComponent } from './cars/cars.component';
+import { CarsService } from './cars/cars.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,10 @@ import { CarsComponent } from './cars/cars.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CarsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
