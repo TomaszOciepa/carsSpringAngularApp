@@ -10,11 +10,12 @@ import { Car } from './models/cars';
 export class CarsComponent implements OnInit {
 
   myCars:Car
-
-  constructor(private carsService: CarsService) { }
+  car:Car
+  constructor(private carsService:CarsService) { }
 
   ngOnInit() {
     this.carsService.getCars().subscribe(carList => this.myCars = carList) 
+    this.carsService.getCar().subscribe(auto => this.car = auto)
   }
 
 }

@@ -1,0 +1,18 @@
+
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <div class="container">
+        <a class="navbar-brand">My Car</a>
+        <span class="navbar-text">
+            <ng-container *ngIf="car">
+                Hello, <strong>{{car.mark}}</strong>!
+              </ng-container>
+        </span>
+    </div>
+  </nav>
+
+
+<div *ngIf="car">
+    <p>Mark: <strong>{{car.mark}}</strong></p>
+    <p>Model: <strong>{{car.model}}</strong></p>
+</div>
+

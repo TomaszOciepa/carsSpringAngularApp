@@ -1,6 +1,16 @@
 
 <h2>My cars</h2>
-
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <div class="container">
+        <a class="navbar-brand">My Car</a>
+        <span class="navbar-text">
+            <ng-container *ngIf="car">
+                Hello, <strong>{{car.mark}}</strong>!
+              </ng-container>
+        </span>
+    </div>
+  </nav>
+  
 <div *ngIf="myCars">
     <table class="table">
         <thead>
